@@ -49,7 +49,9 @@ for v in d.values():
 a = range(1, 11)
 
 
-def double(n: int) -> int: return n * 2
+def double(n: int) -> int:
+    """Returns a doubled argument."""
+    return n * 2
 
 
 # map
@@ -58,7 +60,9 @@ print(list(map(lambda n: n * 3, a)))
 print(list([n * 5 for n in a]))
 
 
-def is_odd(n: int) -> bool: return n % 2
+def is_odd(n: int) -> bool:
+    """"Returns whether it is odd."""
+    return n % 2
 
 
 # filter
@@ -67,11 +71,13 @@ print(list(filter(lambda n: n % 2, a)))
 print([n for n in a if n % 2])
 
 
-def add(x: int, y: int) -> int: return x + y
+def sum(x: int, y: int) -> int:
+    """Returns the sum of two arguments"""
+    return x + y
 
 
 # reduce
-print(reduce(add, a))
+print(reduce(sum, a))
 print(reduce(lambda x, y: x + y, a))
 
 
